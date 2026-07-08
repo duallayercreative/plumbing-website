@@ -48,3 +48,49 @@ mobileLinks.forEach((link) => {
     menuOpen = false;
   });
 });
+
+// ========================
+// BOOKING FORM HANDLER
+// ========================
+const bookingForm = document.getElementById("booking-form");
+const submitBtn = document.getElementById("submit-btn");
+const btnText = document.getElementById("btn-text");
+const btnSpinner = document.getElementById("btn-spinner");
+const btnArrow = document.getElementById("btn-arrow");
+const successMessage = document.getElementById("success-message");
+
+bookingForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Show loading state
+  btnText.textContent = "Sending...";
+  btnSpinner.classList.remove("hidden");
+  btnArrow.classList.add("hidden");
+  submitBtn.disabled = true;
+  submitBtn.classList.add("opacity-80", "cursor-not-allowed");
+
+  // Simulate sending (1.5 second delay)
+  setTimeout(() => {
+
+    // Reset button
+    btnText.textContent = "Send Request";
+    btnSpinner.classList.add("hidden");
+    btnArrow.classList.remove("hidden");
+    submitBtn.disabled = false;
+    submitBtn.classList.remove("opacity-80", "cursor-not-allowed");
+
+    // Show success message
+    successMessage.classList.remove("hidden");
+    successMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+    // Reset form
+    bookingForm.reset();
+
+    // Hide success message after 5 seconds
+    setTimeout(() => {
+      successMessage.classList.add("hidden");
+    }, 5000);
+
+  }, 1500);
+
+});

@@ -75,7 +75,7 @@ body.no-scroll {
 
 /* Row 1 — Moving Left */
 .marquee-row-left {
-  animation: scrollLeft 40s linear infinite;
+  animation: scrollLeft 20s linear infinite;
 }
 
 .marquee-row-left:hover {
@@ -93,7 +93,7 @@ body.no-scroll {
 
 /* Row 2 — Moving Right */
 .marquee-row-right {
-  animation: scrollRight 40s linear infinite;
+  animation: scrollRight 20s linear infinite;
 }
 
 .marquee-row-right:hover {
