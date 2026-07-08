@@ -49,6 +49,7 @@ mobileLinks.forEach((link) => {
   });
 });
 
+
 // ========================
 // BOOKING FORM HANDLER
 // ========================
@@ -93,4 +94,31 @@ bookingForm.addEventListener("submit", function (e) {
 
   }, 1500);
 
+});
+
+// ========================
+// FOOTER — Current Year
+// ========================
+document.getElementById("current-year").textContent = new Date().getFullYear();
+
+
+// ========================
+// NEWSLETTER FORM HANDLER
+// ========================
+const newsletterForm = document.getElementById("newsletter-form");
+const newsletterSuccess = document.getElementById("newsletter-success");
+
+newsletterForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Show success
+  newsletterSuccess.classList.remove("hidden");
+
+  // Reset form
+  newsletterForm.reset();
+
+  // Hide after 4 seconds
+  setTimeout(() => {
+    newsletterSuccess.classList.add("hidden");
+  }, 4000);
 });
