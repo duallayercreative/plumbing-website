@@ -1,0 +1,45 @@
+/* ========================
+   CUSTOM STYLES - A2Z Plumbing
+   ======================== */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glassmorphism navbar on scroll */
+.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Hamburger animation - X shape */
+.menu-open #line1 {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.menu-open #line2 {
+  opacity: 0;
+}
+
+.menu-open #line3 {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Mobile menu open state */
+.mobile-menu-open {
+  transform: translateX(0%) !important;
+}
+
+/* Hide scrollbar when mobile menu open */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Active nav link */
+.nav-active {
+  color: #F97316;
+}
