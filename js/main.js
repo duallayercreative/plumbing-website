@@ -122,3 +122,29 @@ newsletterForm.addEventListener("submit", function (e) {
     newsletterSuccess.classList.add("hidden");
   }, 4000);
 });
+
+// ========================
+// SCROLL REVEAL ANIMATION
+// ========================
+const revealElements = document.querySelectorAll(
+  ".reveal, .reveal-left, .reveal-right, .reveal-scale"
+);
+
+function checkReveal() {
+  const windowHeight = window.innerHeight;
+  const revealPoint = 120;
+
+  revealElements.forEach((el) => {
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - revealPoint) {
+      el.classList.add("active");
+    }
+  });
+}
+
+// Check on scroll
+window.addEventListener("scroll", checkReveal);
+
+// Check on page load (for elements already visible)
+window.addEventListener("load", checkReveal);
