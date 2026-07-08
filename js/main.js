@@ -148,3 +148,36 @@ window.addEventListener("scroll", checkReveal);
 
 // Check on page load (for elements already visible)
 window.addEventListener("load", checkReveal);
+// ========================
+// ACTIVE NAV LINK ON SCROLL
+// ========================
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-link");
+
+function activateNavLink() {
+  const scrollY = window.scrollY;
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute("id");
+
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      // Remove active from all links
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      // Add active to matching link
+      const activeLink = document.querySelector(
+        '.nav-link[href="#' + sectionId + '"]'
+      );
+      if (activeLink) {
+        activeLink.classList.add("active");
+      }
+    }
+  });
+}
+
+window.addEventListener("scroll", activateNavLink);
+window.addEventListener("load", activateNavLink);

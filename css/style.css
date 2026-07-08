@@ -178,3 +178,30 @@ body.no-scroll {
   opacity: 1;
   transform: scale(1);
 }
+/* ========================
+   ACTIVE NAV LINK
+   ======================== */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #F97316;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #F97316;
+}
