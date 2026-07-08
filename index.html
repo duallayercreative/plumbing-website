@@ -1369,8 +1369,266 @@
   </section>
 
 
-  <section id="service-areas" class="h-screen bg-brand-gray flex items-center justify-center">
-    <h2 class="text-3xl font-bold text-gray-300">Service Areas Section</h2>
+  <!-- ======================== -->
+  <!--     SERVICE AREAS        -->
+  <!-- ======================== -->
+  <section id="service-areas" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header — Split Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-end mb-16">
+
+        <!-- LEFT — Badge + Title -->
+        <div>
+          <span class="inline-block text-brand-orange font-bold tracking-widest uppercase text-sm mb-4">
+            // Service Areas
+          </span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark leading-tight">
+            Proudly Serving
+            <span class="text-brand-orange">Your Area</span>
+          </h2>
+        </div>
+
+        <!-- RIGHT — Description -->
+        <div>
+          <p class="text-gray-500 text-lg leading-relaxed">
+            We cover a wide service radius to ensure fast response times.
+            If you don't see your area listed, give us a call — we likely cover it.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Divider Line -->
+      <div class="w-full h-px bg-gray-200 mb-16"></div>
+
+      <!-- ====== MAP AREA ====== -->
+      <div class="relative bg-brand-gray border border-gray-200 rounded-3xl overflow-hidden p-4 sm:p-8 mb-16">
+
+        <!-- Map SVG Container -->
+        <div class="relative w-full aspect-[16/9] sm:aspect-[2/1] lg:aspect-[3/1]">
+
+          <!-- Grid Lines (Subtle Map Feel) -->
+          <svg class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <!-- Horizontal Lines -->
+            <line x1="0" y1="20%" x2="100%" y2="20%" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4 4" />
+            <line x1="0" y1="40%" x2="100%" y2="40%" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4 4" />
+            <line x1="0" y1="60%" x2="100%" y2="60%" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4 4" />
+            <line x1="0" y1="80%" x2="100%" y2="80%" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4 4" />
+            <!-- Vertical Lines -->
+            <line x1="20%" y1="0" x2="20%" y2="100%" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4 4" />
+            <line x1="40%" y1="0" x2="40%" y2="100%" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4 4" />
+            <line x1="60%" y1="0" x2="60%" y2="100%" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4 4" />
+            <line x1="80%" y1="0" x2="80%" y2="100%" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4 4" />
+          </svg>
+
+          <!-- Coverage Radius Circles -->
+          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] aspect-square rounded-full border border-brand-orange/10 bg-brand-orange/[0.03]"></div>
+          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[55%] aspect-square rounded-full border border-brand-orange/15 bg-brand-orange/[0.04]"></div>
+          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] aspect-square rounded-full border border-brand-orange/20 bg-brand-orange/[0.05]"></div>
+
+          <!-- ====== PIN 1 — Downtown (Center) ====== -->
+          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 group z-20">
+            <!-- Ping Animation -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="animate-ping absolute w-8 h-8 rounded-full bg-brand-orange/30"></span>
+            </div>
+            <!-- Pin -->
+            <div class="relative w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center shadow-lg shadow-orange-200 cursor-pointer group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <!-- Label -->
+            <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-brand-dark text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+              Downtown
+              <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-brand-dark rotate-45"></div>
+            </div>
+          </div>
+
+          <!-- ====== PIN 2 — North Side ====== -->
+          <div class="absolute left-[35%] top-[20%] group z-20">
+            <div class="relative w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center shadow-lg shadow-blue-200 cursor-pointer group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-brand-dark text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+              North Houston
+              <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-brand-dark rotate-45"></div>
+            </div>
+          </div>
+
+          <!-- ====== PIN 3 — East Side ====== -->
+          <div class="absolute left-[72%] top-[35%] group z-20">
+            <div class="relative w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center shadow-lg shadow-blue-200 cursor-pointer group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-brand-dark text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+              Pasadena
+              <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-brand-dark rotate-45"></div>
+            </div>
+          </div>
+
+          <!-- ====== PIN 4 — West Side ====== -->
+          <div class="absolute left-[18%] top-[45%] group z-20">
+            <div class="relative w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center shadow-lg shadow-blue-200 cursor-pointer group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-brand-dark text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+              Katy
+              <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-brand-dark rotate-45"></div>
+            </div>
+          </div>
+
+          <!-- ====== PIN 5 — South Side ====== -->
+          <div class="absolute left-[45%] top-[75%] group z-20">
+            <div class="relative w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center shadow-lg shadow-blue-200 cursor-pointer group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-brand-dark text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+              Sugar Land
+              <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-brand-dark rotate-45"></div>
+            </div>
+          </div>
+
+          <!-- ====== PIN 6 — South East ====== -->
+          <div class="absolute left-[65%] top-[65%] group z-20">
+            <div class="relative w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center shadow-lg shadow-blue-200 cursor-pointer group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-brand-dark text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+              Pearland
+              <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-brand-dark rotate-45"></div>
+            </div>
+          </div>
+
+          <!-- ====== PIN 7 — North East ====== -->
+          <div class="absolute left-[60%] top-[18%] group z-20">
+            <div class="relative w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center shadow-lg shadow-blue-200 cursor-pointer group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-brand-dark text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+              Humble
+              <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-brand-dark rotate-45"></div>
+            </div>
+          </div>
+
+          <!-- ====== PIN 8 — North West ====== -->
+          <div class="absolute left-[25%] top-[28%] group z-20">
+            <div class="relative w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center shadow-lg shadow-blue-200 cursor-pointer group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-brand-dark text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+              Cypress
+              <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-brand-dark rotate-45"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ====== CITY TAGS GRID ====== -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+
+        <div class="group flex items-center gap-3 bg-brand-gray border border-gray-200 rounded-xl px-5 py-4 transition-all duration-300 hover:border-brand-orange/30 hover:shadow-lg hover:shadow-orange-100/50 hover:-translate-y-1 cursor-pointer">
+          <div class="w-2 h-2 bg-brand-orange rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+          <span class="text-sm font-semibold text-brand-dark">Downtown</span>
+        </div>
+
+        <div class="group flex items-center gap-3 bg-brand-gray border border-gray-200 rounded-xl px-5 py-4 transition-all duration-300 hover:border-brand-orange/30 hover:shadow-lg hover:shadow-orange-100/50 hover:-translate-y-1 cursor-pointer">
+          <div class="w-2 h-2 bg-brand-blue rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+          <span class="text-sm font-semibold text-brand-dark">North Houston</span>
+        </div>
+
+        <div class="group flex items-center gap-3 bg-brand-gray border border-gray-200 rounded-xl px-5 py-4 transition-all duration-300 hover:border-brand-orange/30 hover:shadow-lg hover:shadow-orange-100/50 hover:-translate-y-1 cursor-pointer">
+          <div class="w-2 h-2 bg-brand-blue rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+          <span class="text-sm font-semibold text-brand-dark">Pasadena</span>
+        </div>
+
+        <div class="group flex items-center gap-3 bg-brand-gray border border-gray-200 rounded-xl px-5 py-4 transition-all duration-300 hover:border-brand-orange/30 hover:shadow-lg hover:shadow-orange-100/50 hover:-translate-y-1 cursor-pointer">
+          <div class="w-2 h-2 bg-brand-blue rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+          <span class="text-sm font-semibold text-brand-dark">Katy</span>
+        </div>
+
+        <div class="group flex items-center gap-3 bg-brand-gray border border-gray-200 rounded-xl px-5 py-4 transition-all duration-300 hover:border-brand-orange/30 hover:shadow-lg hover:shadow-orange-100/50 hover:-translate-y-1 cursor-pointer">
+          <div class="w-2 h-2 bg-brand-blue rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+          <span class="text-sm font-semibold text-brand-dark">Sugar Land</span>
+        </div>
+
+        <div class="group flex items-center gap-3 bg-brand-gray border border-gray-200 rounded-xl px-5 py-4 transition-all duration-300 hover:border-brand-orange/30 hover:shadow-lg hover:shadow-orange-100/50 hover:-translate-y-1 cursor-pointer">
+          <div class="w-2 h-2 bg-brand-blue rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+          <span class="text-sm font-semibold text-brand-dark">Pearland</span>
+        </div>
+
+        <div class="group flex items-center gap-3 bg-brand-gray border border-gray-200 rounded-xl px-5 py-4 transition-all duration-300 hover:border-brand-orange/30 hover:shadow-lg hover:shadow-orange-100/50 hover:-translate-y-1 cursor-pointer">
+          <div class="w-2 h-2 bg-brand-blue rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+          <span class="text-sm font-semibold text-brand-dark">Humble</span>
+        </div>
+
+        <div class="group flex items-center gap-3 bg-brand-gray border border-gray-200 rounded-xl px-5 py-4 transition-all duration-300 hover:border-brand-orange/30 hover:shadow-lg hover:shadow-orange-100/50 hover:-translate-y-1 cursor-pointer">
+          <div class="w-2 h-2 bg-brand-blue rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+          <span class="text-sm font-semibold text-brand-dark">Cypress</span>
+        </div>
+
+        <div class="group flex items-center gap-3 bg-brand-gray border border-gray-200 rounded-xl px-5 py-4 transition-all duration-300 hover:border-brand-orange/30 hover:shadow-lg hover:shadow-orange-100/50 hover:-translate-y-1 cursor-pointer">
+          <div class="w-2 h-2 bg-brand-blue rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+          <span class="text-sm font-semibold text-brand-dark">Spring</span>
+        </div>
+
+        <div class="group flex items-center gap-3 bg-brand-gray border border-gray-200 rounded-xl px-5 py-4 transition-all duration-300 hover:border-brand-orange/30 hover:shadow-lg hover:shadow-orange-100/50 hover:-translate-y-1 cursor-pointer">
+          <div class="w-2 h-2 bg-brand-blue rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+          <span class="text-sm font-semibold text-brand-dark">Missouri City</span>
+        </div>
+
+        <div class="group flex items-center gap-3 bg-brand-gray border border-gray-200 rounded-xl px-5 py-4 transition-all duration-300 hover:border-brand-orange/30 hover:shadow-lg hover:shadow-orange-100/50 hover:-translate-y-1 cursor-pointer">
+          <div class="w-2 h-2 bg-brand-blue rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+          <span class="text-sm font-semibold text-brand-dark">Baytown</span>
+        </div>
+
+        <div class="group flex items-center gap-3 bg-brand-gray border border-gray-200 rounded-xl px-5 py-4 transition-all duration-300 hover:border-brand-orange/30 hover:shadow-lg hover:shadow-orange-100/50 hover:-translate-y-1 cursor-pointer">
+          <div class="w-2 h-2 bg-brand-blue rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+          <span class="text-sm font-semibold text-brand-dark">The Woodlands</span>
+        </div>
+
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="mt-12 text-center">
+        <p class="text-gray-400 text-sm mb-4">Don't see your area? We probably still cover it.</p>
+        <a href="#booking"
+          class="group inline-flex items-center gap-2 text-brand-dark font-bold hover:text-brand-orange transition-colors duration-300">
+          Check your area — Contact us
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
   </section>
 
 
