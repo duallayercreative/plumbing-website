@@ -990,9 +990,10 @@
     <!-- ====== MARQUEE ROW 1 — Moving Left ====== -->
     <div class="relative mb-6">
 
-      <!-- Fade edges -->
-      <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-brand-gray to-transparent z-10"></div>
-      <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-brand-gray to-transparent z-10"></div>
+     
+      <!-- Fade edges — desktop only -->
+<div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-brand-gray to-transparent z-10 hidden lg:block"></div>
+<div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-brand-gray to-transparent z-10 hidden lg:block"></div>
 
       <div class="marquee-row-left flex gap-6 hover:[animation-play-state:paused]">
 
@@ -1180,9 +1181,9 @@
     <!-- ====== MARQUEE ROW 2 — Moving Right ====== -->
     <div class="relative">
 
-      <!-- Fade edges -->
-      <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-brand-gray to-transparent z-10"></div>
-      <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-brand-gray to-transparent z-10"></div>
+      <!-- Fade edges — desktop only -->
+<div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-brand-gray to-transparent z-10 hidden lg:block"></div>
+<div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-brand-gray to-transparent z-10 hidden lg:block"></div>
 
       <div class="marquee-row-right flex gap-6 hover:[animation-play-state:paused]">
 
