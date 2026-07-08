@@ -57,3 +57,54 @@ body.no-scroll {
   stroke-dasharray: 200;
   animation: drawLine 1.5s ease-out forwards;
 }
+
+/* Timeline line gradient fade */
+#how-it-works .absolute.left-5 {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #e5e7eb 5%,
+    #e5e7eb 90%,
+    #F97316 100%
+  );
+}
+
+/* ========================
+   MARQUEE ANIMATIONS
+   ======================== */
+
+/* Row 1 — Moving Left */
+.marquee-row-left {
+  animation: scrollLeft 40s linear infinite;
+}
+
+.marquee-row-left:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Row 2 — Moving Right */
+.marquee-row-right {
+  animation: scrollRight 40s linear infinite;
+}
+
+.marquee-row-right:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
