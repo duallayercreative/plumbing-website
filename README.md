@@ -50,28 +50,6 @@ Built with **HTML5, Tailwind CSS, and vanilla JavaScript** — no frameworks, no
 
 ---
 
-## 📂 Project Structure
-plumbing-website/
-│
-├── index.html # Main HTML file (all sections)
-├── css/
-│ └── style.css # Custom styles
-├── js/
-│ └── main.js # All JavaScript functionality
-├── images/ # WebP images
-│ ├── hero-bg.webp
-│ ├── plumber-team.webp
-│ ├── service-.webp
-│ └── review-.webp
-├── favicon/
-│ └── favicon.ico
-└── README.md # This file
-
-text
-
-
----
-
 ## 🚀 Quick Start
 
 ```bash
