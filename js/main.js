@@ -181,3 +181,22 @@ function activateNavLink() {
 
 window.addEventListener("scroll", activateNavLink);
 window.addEventListener("load", activateNavLink);
+
+// ========================
+// FLOATING BUTTONS LOGIC
+// ========================
+const scrollTopBtn = document.getElementById("scroll-top");
+
+// Show/Hide Scroll Button
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 500) {
+    scrollTopBtn.classList.add("visible");
+  } else {
+    scrollTopBtn.classList.remove("visible");
+  }
+});
+
+// Scroll to Top on Click
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
