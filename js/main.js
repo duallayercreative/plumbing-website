@@ -1,5 +1,5 @@
 // ========================
-// NAVBAR - Glassmorphism on Scroll
+// NAVBAR — Glassmorphism
 // ========================
 const navbar = document.getElementById("navbar");
 
@@ -17,12 +17,10 @@ window.addEventListener("scroll", () => {
 // ========================
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
-
 let menuOpen = false;
 
 menuBtn.addEventListener("click", () => {
   menuOpen = !menuOpen;
-
   if (menuOpen) {
     menuBtn.classList.add("menu-open");
     mobileMenu.classList.add("mobile-menu-open");
@@ -63,38 +61,30 @@ const successMessage = document.getElementById("success-message");
 bookingForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  // Show loading state
   btnText.textContent = "Sending...";
   btnSpinner.classList.remove("hidden");
   btnArrow.classList.add("hidden");
   submitBtn.disabled = true;
   submitBtn.classList.add("opacity-80", "cursor-not-allowed");
 
-  // Simulate sending (1.5 second delay)
   setTimeout(() => {
-
-    // Reset button
     btnText.textContent = "Send Request";
     btnSpinner.classList.add("hidden");
     btnArrow.classList.remove("hidden");
     submitBtn.disabled = false;
     submitBtn.classList.remove("opacity-80", "cursor-not-allowed");
 
-    // Show success message
     successMessage.classList.remove("hidden");
     successMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
 
-    // Reset form
     bookingForm.reset();
 
-    // Hide success message after 5 seconds
     setTimeout(() => {
       successMessage.classList.add("hidden");
     }, 5000);
-
   }, 1500);
-
 });
+
 
 // ========================
 // FOOTER — Current Year
@@ -110,18 +100,13 @@ const newsletterSuccess = document.getElementById("newsletter-success");
 
 newsletterForm.addEventListener("submit", function (e) {
   e.preventDefault();
-
-  // Show success
   newsletterSuccess.classList.remove("hidden");
-
-  // Reset form
   newsletterForm.reset();
-
-  // Hide after 4 seconds
   setTimeout(() => {
     newsletterSuccess.classList.add("hidden");
   }, 4000);
 });
+
 
 // ========================
 // SCROLL REVEAL ANIMATION
@@ -136,18 +121,16 @@ function checkReveal() {
 
   revealElements.forEach((el) => {
     const elementTop = el.getBoundingClientRect().top;
-
     if (elementTop < windowHeight - revealPoint) {
       el.classList.add("active");
     }
   });
 }
 
-// Check on scroll
 window.addEventListener("scroll", checkReveal);
-
-// Check on page load (for elements already visible)
 window.addEventListener("load", checkReveal);
+
+
 // ========================
 // ACTIVE NAV LINK ON SCROLL
 // ========================
@@ -163,18 +146,12 @@ function activateNavLink() {
     const sectionId = section.getAttribute("id");
 
     if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      // Remove active from all links
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-      });
+      navLinks.forEach((link) => link.classList.remove("active"));
 
-      // Add active to matching link
       const activeLink = document.querySelector(
         '.nav-link[href="#' + sectionId + '"]'
       );
-      if (activeLink) {
-        activeLink.classList.add("active");
-      }
+      if (activeLink) activeLink.classList.add("active");
     }
   });
 }
@@ -182,12 +159,12 @@ function activateNavLink() {
 window.addEventListener("scroll", activateNavLink);
 window.addEventListener("load", activateNavLink);
 
+
 // ========================
-// FLOATING BUTTONS LOGIC
+// FLOATING BUTTONS
 // ========================
 const scrollTopBtn = document.getElementById("scroll-top");
 
-// Show/Hide Scroll Button
 window.addEventListener("scroll", () => {
   if (window.scrollY > 500) {
     scrollTopBtn.classList.add("visible");
@@ -196,7 +173,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Scroll to Top on Click
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
